@@ -119,7 +119,8 @@ img {
 .page-about .nav-about,
 .page-links .nav-links,
 .page-contact .nav-contact,
-.page-schedule .nav-schedule {
+.page-schedule .nav-schedule,
+.page-petition .nav-petition {
   color: var(--primary);
   background: rgba(49, 130, 206, 0.1);
 }
