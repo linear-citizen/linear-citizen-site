@@ -334,6 +334,37 @@ li {
   margin: 0;
 }
 
+/* カードの色バリエーション */
+.card-blue {
+  background: linear-gradient(135deg, rgba(49, 130, 206, 0.08) 0%, rgba(49, 130, 206, 0.03) 100%);
+  border-left: 3px solid #3182ce;
+}
+
+.card-green {
+  background: linear-gradient(135deg, rgba(56, 161, 105, 0.08) 0%, rgba(56, 161, 105, 0.03) 100%);
+  border-left: 3px solid #38a169;
+}
+
+.card-orange {
+  background: linear-gradient(135deg, rgba(221, 107, 32, 0.08) 0%, rgba(221, 107, 32, 0.03) 100%);
+  border-left: 3px solid #dd6b20;
+}
+
+.card-red {
+  background: linear-gradient(135deg, rgba(229, 62, 62, 0.08) 0%, rgba(229, 62, 62, 0.03) 100%);
+  border-left: 3px solid #e53e3e;
+}
+
+.card-purple {
+  background: linear-gradient(135deg, rgba(128, 90, 213, 0.08) 0%, rgba(128, 90, 213, 0.03) 100%);
+  border-left: 3px solid #805ad5;
+}
+
+.card-gray {
+  background: linear-gradient(135deg, rgba(113, 128, 150, 0.08) 0%, rgba(113, 128, 150, 0.03) 100%);
+  border-left: 3px solid #718096;
+}
+
 /* リンク形式のカード */
 a.card-link {
   display: block;
