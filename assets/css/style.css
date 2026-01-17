@@ -147,3 +147,12 @@ h2 {
   }
 }
 
+/* ==== EMERGENCY FIX: stop image flicker on mobile ==== */
+.cover img {
+  display: block;
+  opacity: 1 !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+}
