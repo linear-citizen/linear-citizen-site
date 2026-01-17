@@ -20,7 +20,7 @@ body {
 }
 
 /* =========================
-   Layout (PC基準)
+   Layout
 ========================= */
 
 .document {
@@ -91,10 +91,6 @@ h2 {
   text-decoration: underline;
 }
 
-.doc-list a:hover {
-  text-decoration: none;
-}
-
 .meta {
   font-size: 0.85rem;
   color: #666;
@@ -108,6 +104,17 @@ h2 {
 }
 
 /* =========================
+   Cover (FIXED)
+========================= */
+
+.cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+
+/* =========================
    Footer
 ========================= */
 
@@ -118,11 +125,10 @@ h2 {
 }
 
 /* =========================
-   Mobile tuning
+   Mobile
 ========================= */
 
 @media (max-width: 640px) {
-
   body {
     font-size: 16.5px;
     line-height: 2.0;
@@ -139,7 +145,6 @@ h2 {
 
   h2 {
     font-size: 1.25rem;
-    margin-top: 3rem;
   }
 
   section {
@@ -147,12 +152,3 @@ h2 {
   }
 }
 
-/* ==== EMERGENCY FIX: stop image flicker on mobile ==== */
-.cover img {
-  display: block;
-  opacity: 1 !important;
-  transition: none !important;
-  animation: none !important;
-  transform: none !important;
-  will-change: auto !important;
-}
