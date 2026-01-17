@@ -1,13 +1,21 @@
 :root {
-  --bg: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --accent: #2563eb;
+  /* base */
+  --bg: #f9fafb;
+  --panel: #ffffff;
+
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+
+  /* accent */
+  --accent: #0f766e;
+  --accent-soft: #ccfbf1;
+  --accent-grad: linear-gradient(135deg, #0f766e, #0e7490);
+
   --max-width: 1080px;
 }
 
-/* Reset */
+/* reset */
 * { box-sizing: border-box; }
 
 body {
@@ -25,37 +33,34 @@ body {
   line-height: 1.75;
 }
 
-/* ================= Header ================= */
+/* ================= header ================= */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
-/* 上段：団体名 */
 .header-brand {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 1.5rem 0.5rem;
+  padding: 1.1rem 1.5rem 0.4rem;
 }
 
 .header-brand a {
   font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
   color: var(--text);
   text-decoration: none;
 }
 
-/* 下段：メニュー */
 .nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0.5rem 1.5rem 0.75rem;
+  padding: 0.4rem 1.5rem 0.8rem;
   display: flex;
   gap: 1.25rem;
   flex-wrap: wrap;
@@ -69,16 +74,16 @@ body {
 }
 
 .nav a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
-/* Active menu */
+/* active menu */
 .page-home .nav-home,
 .page-documents .nav-documents,
 .page-about .nav-about,
 .page-links .nav-links,
 .page-contact .nav-contact {
-  color: var(--text);
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -93,71 +98,75 @@ body {
   bottom: -4px;
   width: 100%;
   height: 1px;
-  background: var(--text);
+  background: var(--accent);
 }
 
-/* ================= Layout ================= */
+/* ================= layout ================= */
 
 .content {
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 4rem 1.5rem 5rem;
+  margin: 3rem auto 4rem;
+  padding: 3.5rem 3rem 4rem;
+  background: var(--panel);
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.05);
 }
 
-section { margin-bottom: 4rem; }
-
-/* Headings + thin rule */
-h1, h2 {
-  margin: 0 0 1.2rem;
-  position: relative;
+section {
+  margin-bottom: 4.5rem;
 }
+
+/* ================= typography ================= */
 
 h1 {
-  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.35;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
+  color: var(--accent);
 }
 
 h1::after,
 h2::after {
   content: "";
   display: block;
-  width: 48px;
+  width: 56px;
   height: 1px;
-  background: var(--border);
-  margin-top: 0.6rem;
+  background: var(--accent);
+  opacity: 0.35;
+  margin-top: 0.7rem;
 }
 
-/* Text */
 p {
-  max-width: 52rem;
+  max-width: 54rem;
   margin: 0 0 1.2rem;
 }
 
-a { color: var(--accent); }
-
-/* Cards */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+.link-lead a {
+  font-weight: 600;
 }
+
+/* ================= card ================= */
 
 .card {
+  background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.8rem;
-  background: #fafafa;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(15,118,110,0.1);
 }
 
-.card h3 {
-  margin: 0 0 0.8rem;
-  font-size: 1.1rem;
+.card a {
+  color: var(--accent);
 }
 
-/* Update log */
+/* ================= update log ================= */
+
 .update-log {
   list-style: none;
   padding: 0;
@@ -171,25 +180,30 @@ a { color: var(--accent); }
 
 .update-log time {
   font-weight: 600;
-  margin-right: 0.5rem;
+  margin-right: 0.6rem;
 }
 
-/* Footer */
+/* ================= footer ================= */
+
 .site-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 1.5rem;
   text-align: center;
+  padding: 2rem 1.5rem;
   font-size: 0.85rem;
   color: var(--muted);
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .nav {
-    gap: 0.75rem 1rem;
-  }
+/* ================= mobile ================= */
+
+@media (max-width: 700px) {
   .content {
-    padding: 3rem 1.25rem 4rem;
+    margin: 1.5rem;
+    padding: 2.5rem 1.8rem 3rem;
+    border-radius: 22px;
+  }
+
+  .nav {
+    gap: 0.8rem 1rem;
   }
 }
 
