@@ -614,61 +614,129 @@ blockquote p {
     padding: 1rem 0 0.5rem;
   }
 
+  .header-brand a {
+    font-size: 1.1rem;
+  }
+
   .nav {
     padding: 0.5rem 0 1rem;
-    gap: 0.3rem;
+    gap: 0.25rem;
+    width: 100%;
   }
 
   .nav a {
-    padding: 0.4rem 0.7rem;
-    font-size: 0.85rem;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
   }
 
   .hero {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding-left: 0.8rem;
+    border-left-width: 3px;
   }
 
-  .content {
-    padding: 0 1rem 3rem;
-  }
-
-  section {
-    padding: 1.5rem;
+  .hero .lead {
+    font-size: 0.95rem;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
   }
 
+  .hero-links a {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 1rem 1rem 2rem;
+  }
+
+  section {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+  }
+
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   h2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .update-log li {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    padding: 0.8rem 0;
+  }
+
+  .update-log time {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
   }
 
   .footer-inner {
     padding: 2rem 1rem;
   }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .page-header {
+    padding: 2rem 1rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+
   .hero-links {
     flex-direction: column;
   }
 
   .hero-links a {
     justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .nav a {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  section {
+    padding: 1rem;
   }
 }
